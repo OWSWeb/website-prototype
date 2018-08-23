@@ -1,0 +1,28 @@
+.grid
+  display: flex
+
+  &.col-gap-1 .col
+    margin-right: $spacer / 2
+
+  &.col-gap-2 .col
+    margin-right: $spacer
+
+  &.col-gap-3 .col
+    margin-right: $spacer * 2
+
+  &.col-gap-4 .col
+    margin-right: $spacer * 3
+
+  &.col-gap-5 .col
+    margin-right: $spacer * 4
+
+  .col
+    flex: 1
+
+    &:last-child
+      margin-right: 0
+
+    &.center
+      display: flex
+      justify-content: center
+      align-items: center
