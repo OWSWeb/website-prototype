@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OWS Netz Prototype</title>
+  <title>OWS Netz - Das Nachbarschaftsnetzwerk in Salzgitter-Bad</title>
   <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body>
@@ -18,20 +18,20 @@
 
           <nav class="nav">
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="index.html">Startseite</a></li>
+              <li><a href="about.html">Über uns</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
             </ul>
           </nav>
         </div>
 
         <div class="header-actions">
-          <select id="language" class="header-action language-select">
-            <option value="en_UK">English, UK</option>
+          <select id="language" class="header-action form-field language-select">
             <option value="de_DE">Deutsch, Deutschland</option>
+            <option value="en_UK">English, UK</option>
           </select>
-          <a href="sign-in.html" class="header-action btn btn-secondary">Sign in</a>
-          <a href="sign-up.html" class="header-action btn btn-primary">Sign up</a>
+          <a href="sign-in.html" class="header-action btn btn-secondary">Einloggen</a>
+          <a href="sign-up.html" class="header-action btn btn-primary">Registrieren</a>
         </div>
       </div>
     </header>
@@ -41,36 +41,43 @@
         <div class="container section-container">
           <h1 class="site-heading">Ost- und Westsiedlung Salzgitter-Bad Netzwerk e.V.</h1>
           <p class="lead">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+            Das Nachbarschaftsnetzwerk in Salzgitter-Bad.
           </p>
-          <a href="about.html" class="btn btn-primary">Learn more</a>
+          <a href="about.html" class="btn btn-primary">Mehr erfahren</a>
         </div>
       </section>
 
       <section class="section">
         <div class="container section-container center">
-          <h2 class="section-heading mb-5">Our mission</h2>
+          <h2 class="section-heading">OWS freeWifi</h2>
 
-          <div class="grid">
-            <div class="col">
-              <img src="https://unsplash.it/1920/1080" alt="">
-            </div>
-            <div class="col center">
-              <p class="w-500">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Donec quam felis, ultricies nec.
-              </p>
-            </div>
-          </div>
+          <p class="text-center">
+            Öffnen Sie die WLAN-Einstellungen auf Ihrem Gerät, suchen Sie nach
+            dem Netzwerknamen bzw. der SSID "OWS freeWifi" und verbinden Sie sich!
+          </p>
 
-          <a href="about.html" class="btn btn-primary mt-5">Learn more</a>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=OWS%20Netz" alt="OWS freeWifi QR-Code" class="img">
         </div>
       </section>
 
       <section class="section">
         <div class="container section-container center">
-          <h2 class="section-heading">That's what we do</h2>
+          <h2 class="section-heading">Der Verein</h2>
+
+          <p>
+            Das gemeinnützige Netzwerk Ost- und Westsiedlung Salzgitter-Bad e.V. wurde mit dem Zweck gegründet,
+            die Infrastruktur des OWS freeWifi Funknetzes zu betreiben und als zentraler Ansprechpartner zu dienen.
+            Die Mitgliedschaft im Verein ist kostenlos. Ziel ist es, die Lebensqualität vor Ort zu verbessern und
+            jedem dem Zugang zu Kommunikationsnetzwerken zu ermöglichen.
+          </p>
+
+          <a href="about.html" class="btn btn-primary">Mehr erfahren</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container section-container center">
+          <h2 class="section-heading">Das machen wir</h2>
 
           <p class="lead text-center mb-5">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
@@ -119,22 +126,22 @@
 
       <section class="section">
         <div class="container section-container center">
-          <h2 class="section-heading">Become a member</h2>
+          <h2 class="section-heading">Werde Mitglied</h2>
 
           <p class="lead text-center">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
           </p>
 
           <div class="section-buttons">
-            <a href="sign-in.html" class="btn btn-secondary btn-white">Sign in</a>
-            <a href="sign-up.html" class="btn btn-primary">Sign up</a>
+            <a href="sign-in.html" class="btn btn-secondary btn-white">Einloggen</a>
+            <a href="sign-up.html" class="btn btn-primary">Registrieren</a>
           </div>
         </div>
       </section>
 
       <section class="section">
         <div class="container section-container center">
-          <h2 class="section-heading">Contact</h2>
+          <h2 class="section-heading">Kontakt</h2>
 
           <p class="lead text-center">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
@@ -143,13 +150,13 @@
           <form action="" method="post" class="form">
             <input type="text" name="name" placeholder="Name" class="form-field">
 
-            <input type="email" name="email" placeholder="Email" class="form-field">
+            <input type="email" name="email" placeholder="E-Mail" class="form-field">
 
-            <input type="text" name="subject" placeholder="Subject" class="form-field">
+            <input type="text" name="subject" placeholder="Betreff" class="form-field">
 
-            <textarea name="message" cols="30" rows="10" placeholder="Message" class="form-field form-field-textarea"></textarea>
+            <textarea name="message" cols="30" rows="10" placeholder="Nachricht" class="form-field form-field-textarea"></textarea>
 
-            <button type="submit" class="btn btn-primary">Contact us</button>
+            <button type="submit" class="btn btn-primary">Kontaktiere uns</button>
           </form>
         </div>
       </section>
@@ -165,20 +172,20 @@
 
           <nav class="nav">
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="index.html">Startseite</a></li>
+              <li><a href="about.html">Über uns</a></li>
+              <li><a href="contact.html">Kontakt</a></li>
             </ul>
           </nav>
         </div>
 
         <div class="footer-actions">
-          <select id="language" class="footer-action language-select">
-            <option value="en_UK">English, UK</option>
+          <select id="language" class="footer-action form-field language-select">
             <option value="de_DE">Deutsch, Deutschland</option>
+            <option value="en_UK">English, UK</option>
           </select>
-          <a href="/sign-in.html" class="footer-action btn btn-secondary">Sign in</a>
-          <a href="/sign-up.html" class="footer-action btn btn-primary">Sign up</a>
+          <a href="/sign-in.html" class="footer-action btn btn-secondary">Einloggen</a>
+          <a href="/sign-up.html" class="footer-action btn btn-primary">Registrieren</a>
         </div>
       </div>
     </footer>
