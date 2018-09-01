@@ -15,6 +15,8 @@
  *
  * The gulp configuration file.
  *
+ * Modified for use in OWSWeb/website-prototype.
+ *
  */
 
 const gulp                      = require('gulp'),
@@ -76,6 +78,11 @@ gulp.task('js', () => {
     .pipe(browserSync.stream());
 });
 
+gulp.task('images', () => {
+  return gulp.src([ src_assets_folder + 'images/**/*.+(png|jpg|gif|svg|ico)' ])
+    .pipe(gulp.dest(dist_assets_folder + 'images'));
+});
+
 gulp.task('vendor', () => {
   if (node_dependencies.length === 0) {
     return new Promise((resolve) => {
@@ -89,7 +96,7 @@ gulp.task('vendor', () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task('build', gulp.series('clear', 'html', 'sass', 'js', 'vendor'));
+gulp.task('build', gulp.series('clear', 'html', 'sass', 'js', 'images', 'vendor'));
 
 gulp.task('serve', () => {
   return browserSync.init({
