@@ -5,7 +5,7 @@
  * @author JR Cologne <kontakt@jr-cologne.de>
  * @copyright 2018 JR Cologne
  * @license https://github.com/jr-cologne/gulp-starter-kit/blob/master/LICENSE MIT
- * @version v0.1.2-alpha
+ * @version v0.2.0-alpha
  * @link https://github.com/jr-cologne/gulp-starter-kit GitHub Repository
  * @link https://www.npmjs.com/package/@jr-cologne/create-gulp-starter-kit npm package site
  *
@@ -29,6 +29,7 @@ const gulp                      = require('gulp'),
       babel                     = require('gulp-babel'),
       uglify                    = require('gulp-uglify'),
       concat                    = require('gulp-concat'),
+      imagemin                  = require('gulp-imagemin'),
       browserSync               = require('browser-sync').create(),
 
       src_folder                = './src/',
@@ -79,8 +80,11 @@ gulp.task('js', () => {
 });
 
 gulp.task('images', () => {
-  return gulp.src([ src_assets_folder + 'images/**/*.+(png|jpg|gif|svg|ico)' ])
-    .pipe(gulp.dest(dist_assets_folder + 'images'));
+  return gulp.src([ src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|svg|ico)' ])
+    .pipe(plumber())
+    .pipe(imagemin())
+    .pipe(gulp.dest(dist_assets_folder + 'images'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('vendor', () => {
@@ -112,7 +116,8 @@ gulp.task('watch', () => {
   let watch = [
     src_folder + '**/*.html',
     src_assets_folder + 'sass/**/*.sass',
-    src_assets_folder + 'js/**/*.js'
+    src_assets_folder + 'js/**/*.js',
+    src_assets_folder + 'images/**/*.+(png|jpg|jpeg|gif|svg|ico)'
   ];
 
   node_dependencies.forEach(dependency => {
