@@ -32,6 +32,33 @@ window.cookieconsent.initialise({
 })});
 </script>
 
+
+<script>
+<!--
+
+function serialCreate() {
+
+    var text = "Klicken sie auf generieren."
+
+if (document.getElementById("serial").innerHTML == text ) {
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("serial").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("POST", "startcode.php", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("generate=Ford");
+
+}
+
+    }
+
+-->
+</script> 
+
 </head>
 <body>
   <div class="wrapper">
@@ -66,22 +93,19 @@ window.cookieconsent.initialise({
     <main class="main">
       <section class="section full-height-section section-light">
         <div class="container section-container center">
-          <h1 class="site-heading">Registrierung</h1>
+          <h1 class="site-heading">StartCode</h1>
 
           <p class="text-center w-800">
-            Registrieren Sie sich unten für einen kostenlosen OWS-Netz-Account,
-            um Zugriff auf weitere Funktionen des Nachbarschaftsnetzwerks von Salzgitter-Bad zu erhalten.
+            Mit dem StartCode richten Sie Ihr Endgerat schnell ein.
+            Notieren Sie sich den StartCode gut oder drucken ihn aus.
           </p>
+        StartCode: 
+        <div id="serial">Klicken sie auf generieren.</div>
 
-          <form action="" method="post" class="form">
-            <input type="text" name="username" placeholder="Benutzername" class="form-field">
+        <div>
+        <button class="btn btn-primary" onclick="serialCreate()">generieren</button>
+        </div>
 
-            <input type="email" name="email" placeholder="E-Mail" class="form-field">
-
-            <input type="password" name="password" placeholder="Passwort" class="form-field">
-
-            <button type="submit" class="btn btn-primary">Registrieren</button>
-          </form>
         </div>
       </section>
     </main>
