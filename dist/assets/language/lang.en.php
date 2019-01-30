@@ -91,6 +91,17 @@ $lang['text_section_kontakt_text']              = 'Write us a message or come ov
 $lang['page_about']                   = 'What we do and why we are here';
 $lang['page_about_text']              = 'We are an association.';
 
+$lang['page_freewifi']                   = 'Was wir machen und warum wir hier sind';
+$lang['page_freewifi_text']              = 'Wir sind ein Verein.';
+
+$lang['page_sip']                   = 'Kommunikation';
+$lang['page_sip_text']              = ' Telefonate, Fax, SMS, Videotelefonie ';
+
+$lang['page_support']                   = 'Hilfestellungen';
+$lang['page_support_text']              = 'Hilfe und Unterstuetzung. Bewerbung. Mahnungen. Jobcenter. Antraege. Sozialamt. Weitere Ansprechpartner: SOS-Muetterzentrum Strom ...';
+
+$lang['page_more']                   = 'Was wir noch machen';
+$lang['page_more_text']              = ' Erinnerungsservice';
 
 
 

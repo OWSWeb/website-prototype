@@ -73,21 +73,20 @@ include_once 'assets/language/language.php';
     <main class="main">
       <section class="section full-height-section section-light">
         <div class="container section-container center">
-          <h1 class="site-heading">Registrierung</h1>
+          <h1 class="site-heading"><?php echo $lang['page_signup']; ?></h1>
 
           <p class="text-center w-800">
-            Registrieren Sie sich unten für einen kostenlosen OWS-Netz-Account,
-            um Zugriff auf weitere Funktionen des Nachbarschaftsnetzwerks von Salzgitter-Bad zu erhalten.
+            <?php echo $lang['page_signup_text']; ?>
           </p>
 
           <form action="sign-mail.php" method="post" class="form">
-            <input type="text" name="username" placeholder="Benutzername" class="form-field">
+            <input type="text" name="username" placeholder="<?php echo $lang['input_username']; ?>" class="form-field">
 
-            <input type="email" name="email" placeholder="E-Mail" class="form-field">
+            <input type="email" name="email" placeholder="<?php echo $lang['input_email']; ?>" class="form-field">
 
-            <input type="password" name="password" placeholder="Passwort" class="form-field">
+            <input type="password" name="password" placeholder="<?php echo $lang['input_passwd']; ?>" class="form-field">
 
-            <button type="submit" class="btn btn-primary">Registrieren</button>
+            <button type="submit" class="btn btn-primary"><?php echo $lang['button_register']; ?></button>
           </form>
         </div>
       </section>

@@ -72,22 +72,22 @@ include_once 'assets/language/language.php';
     <main class="main">
       <section class="section full-height-section section-light">
         <div class="container section-container center">
-          <h1 class="site-heading">Login</h1>
+          <h1 class="site-heading"><?php echo $lang['page_login']; ?></h1>
 
           <p class="text-center w-800">
-            Loggen Sie sich unten mithilfe von Ihrer E-Mail-Adresse und Ihrem Passwort ein.
+            <?php echo $lang['page_login_text']; ?>
           </p>
 
           <form action="" method="post" class="form">
-            <input type="email" name="email" placeholder="E-Mail" class="form-field">
+            <input type="email" name="email" placeholder="<?php echo $lang['input_email']; ?>" class="form-field">
 
-            <input type="password" name="password" placeholder="Passwort" class="form-field mb-2">
+            <input type="password" name="password" placeholder="<?php echo $lang['input_passwd']; ?>" class="form-field mb-2">
 
             <div class="form-actions">
-              <a href="#">Passwort vergessen?</a>
+              <a href="#"><?php echo $lang['text_forgotten_passwd']; ?></a>
             </div>
 
-            <button type="submit" class="btn btn-primary">Einloggen</button>
+            <button type="submit" class="btn btn-primary"><?php echo $lang['button_login']; ?></button>
           </form>
         </div>
       </section>

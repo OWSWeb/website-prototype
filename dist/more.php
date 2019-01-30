@@ -72,10 +72,10 @@ include_once 'assets/language/language.php';
     <main class="main">
       <section class="section full-height-section section-light">
         <div class="container section-container center">
-          <h1 class="site-heading">Was wir noch machen</h1>
+          <h1 class="site-heading"><?php echo $lang['page_more']; ?></h1>
 
           <p class="text-center w-800">
-            Erinnerungsservice
+            <?php echo $lang['page_more_text']; ?>
           </p>
 
         </div>

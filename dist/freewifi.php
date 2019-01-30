@@ -72,10 +72,10 @@ include_once 'assets/language/language.php';
     <main class="main">
       <section class="section full-height-section section-light">
         <div class="container section-container center">
-          <h1 class="site-heading">OWS freeWifi</h1>
+          <h1 class="site-heading"><?php echo $lang['page_freewifi']; ?></h1>
 
           <p class="text-center w-800">
-            Das OWS freeWifi ist ein freies WLAN Netz fuer alle.
+            <?php echo $lang['page_freewifi_text']; ?>
           </p>
 
         </div>

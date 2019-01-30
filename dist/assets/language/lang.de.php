@@ -18,17 +18,21 @@ $lang['PAGE_TITLE'] = 'OWS Netz - Das Nachbarschaftsnetzwerk in Salzgitter-Bad';
 $lang['text_yes']              = 'Ja';
 $lang['text_no']               = 'Nein';
 $lang['text_more_infos']       = 'Mehr Infos';
+$lang['text_forgotten_passwd']       = 'Passwort vergessen?';
+$lang['text_click2generate']               = 'Klicken sie auf generieren.';
 
 // input formular felder
 $lang['input_name']           = 'Name';
+$lang['input_username']       = 'Benutzername';
 $lang['input_email']          = 'E-Mail';
 $lang['input_subject']        = 'Betreff';
 $lang['input_message']        = 'Nachricht';
+$lang['input_passwd']        = 'Passwort';
 
 // Buttons
 $lang['button_about']          = 'Mehr erfahren';
 $lang['button_back']           = 'Back';
-$lang['button_continue']       = 'Continue';
+$lang['button_continue']       = 'Weiter';
 $lang['button_cancel']         = 'Cancel';
 $lang['button_confirm']        = 'Ok';
 $lang['button_delete']         = 'Delete';
@@ -43,6 +47,10 @@ $lang['button_return']         = 'Return';
 $lang['button_search']         = 'Search';
 $lang['button_submit']         = 'Absenden';
 $lang['button_upload']         = 'Upload File';
+$lang['button_generate']         = 'Generieren';
+
+// Label
+$lang['label_startcode']         = 'StartCode:';
 
 
 // banner
@@ -87,11 +95,39 @@ $lang['text_section_account_text']              = 'Erstellen Sie einen kostenlos
 $lang['text_section_kontakt']                   = 'Kontakt';
 $lang['text_section_kontakt_text']              = 'Schreiben Sie uns eine Nachricht oder kommen Sie vorbei. Eine Wegbeschreibung finden Sie hier.';
 
+$lang['section_map']                   = 'Karte';
+
 
 $lang['page_about']                   = 'Was wir machen und warum wir hier sind';
 $lang['page_about_text']              = 'Wir sind ein Verein.';
 
+$lang['page_kontakt']                   = 'Kontakt';
+$lang['page_kontakt_text']              = 'Sie finden uns hier:';
 
+
+$lang['page_freewifi']                   = 'OWS freeWifi';
+$lang['page_freewifi_text']              = 'Das OWS freeWifi ist ein freies WLAN Netz fuer alle.';
+
+$lang['page_sip']                   = 'Kommunikation';
+$lang['page_sip_text']              = ' Telefonate, Fax, SMS, Videotelefonie ';
+
+$lang['page_support']                   = 'Hilfestellungen';
+$lang['page_support_text']              = 'Hilfe und Unterstuetzung. Bewerbung. Mahnungen. Jobcenter. Antraege. Sozialamt. Weitere Ansprechpartner: SOS-Muetterzentrum Strom ...';
+
+$lang['page_more']                   = 'Was wir noch machen';
+$lang['page_more_text']              = ' Erinnerungsservice';
+
+$lang['page_login']                   = 'Login';
+$lang['page_login_text']              = 'Loggen Sie sich unten mithilfe von Ihrer E-Mail-Adresse und Ihrem Passwort ein.';
+
+$lang['page_signmail']                   = 'Bestaetigungs Link';
+$lang['page_signmail_text']              = 'Sie erhalten in kuerze eine E-Mail mit einem Bestaetigungslink. Bitte rufen sie diesen Link auf und klicken dann auf Weiter.';
+
+$lang['page_signup']                   = 'Registrierung';
+$lang['page_signup_text']              = 'Registrieren Sie sich unten für einen kostenlosen OWS-Netz-Account, um Zugriff auf weitere Funktionen des Nachbarschaftsnetzwerks von Salzgitter-Bad zu erhalten.';
+
+$lang['page_startcode']                   = 'StartCode';
+$lang['page_startcode_text']              = 'Mit dem StartCode richten Sie Ihr Endgerat schnell ein. Notieren Sie sich den StartCode gut oder drucken ihn aus.';
 
 
 ?>
