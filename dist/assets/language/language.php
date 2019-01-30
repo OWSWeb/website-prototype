@@ -11,33 +11,37 @@
         } else if(isSet($_COOKIE['lang'])) {
             $lang = $_COOKIE['lang'];
         } else {
-            $lang = 'de_DE';
+            $lang = 'de';
         }
 
         switch ($lang) {
-              case 'en_UK':
-              //English
+
+              case 'en':
+              //Englisch
               $lang_file = 'lang.en.php';
               break;
-              case 'de_DE':
-              //German
+
+              case 'de':
+              //Deutsch
               $lang_file = 'lang.de.php';
               break;
-              case 'ar_AR':
-              //Spanish
+
+              case 'ar':
+              //Arabisch
               $lang_file = 'lang.ar.php';
               break;
-              
-              case 'hi':
-              //Hindi
-              $lang_file = 'lang.hi.php';
+
+              case 'ru':
+              //Russisch
+              $lang_file = 'lang.ru.php';
               break;
-              
-              case 'fr':
-              //Franch
-              $lang_file = 'lang.fr.php';
+
+              case 'pl':
+              //Polnisch
+              $lang_file = 'lang.pl.php';
               break;
-            // Default English
+
+            // Default Deutsch
               default:
               $lang_file = 'lang.de.php';
         }

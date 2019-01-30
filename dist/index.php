@@ -1,43 +1,41 @@
 <?php
 include_once 'assets/language/language.php';
+
+
 ?>
 <!DOCTYPE html>
 <html dir="<?php echo $lang['direction']; ?>" lang="<?php echo $lang['code']; ?>">
 <head>
   <meta charset="UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title><?php echo $lang['PAGE_TITLE']; ?></title>
-
   <link rel="stylesheet" href="assets/css/app.css">
 
-<!-- Cookie Consent plugin by Insites - https://cookieconsent.insites.com/ -->
-<link rel="stylesheet" href="cookieconsent.min.css">
-<script async src="cookieconsent.min.js"></script>
-<script>
-window.addEventListener("load", function(){
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "classic",
-  "position": "top",
-  "static": true,
-  "content": {
-    "message": "<?php echo $lang['text_banner_dsvgo']; ?>",
-    "dismiss": "<?php echo $lang['button_confirm']; ?>",
-    "link": "<?php echo $lang['text_more_infos']; ?>",
-    "href": "datenschutz.html"
-  }
-})});
-</script>
-
+    <!-- Cookie Consent plugin by Insites - https://cookieconsent.insites.com/ -->
+    <link rel="stylesheet" href="cookieconsent.min.css">
+    <script async src="cookieconsent.min.js"></script>
+    <script>
+        window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+          "palette": {
+          "popup": {
+              "background": "#000"
+          },
+          "button": {
+              "background": "#f1d600"
+          }
+          },
+          "theme": "classic",
+          "position": "top",
+          "static": true,
+          "content": {
+            "message": "<?php echo $lang['text_banner_datenschutz']; ?>",
+            "dismiss": "<?php echo $lang['button_confirm']; ?>",
+            "link": "<?php echo $lang['text_more_infos']; ?>",
+            "href": "datenschutz.php"
+          }
+        })});
+    </script>
 
 </head>
 <body>
@@ -47,34 +45,25 @@ window.cookieconsent.initialise({
         <div class="logo-nav-wrapper">
           <a href="index.php" class="logo">
             <img src="assets/images/ows-logo.png" alt="OWS Netz Logo" class="logo-image">
-            <p class="logo-text">OWS Netz</p>
           </a>
 
           <nav class="nav">
             <ul>
-              <li><a href="index.html" class="current"><?php echo $lang['text_nav_index']; ?></a></li>
-              <li><a href="about.html"><?php echo $lang['text_nav_about']; ?></a></li>
-              <li><a href="contact.html"><?php echo $lang['text_nav_kontakt']; ?></a></li>
+              <li><a href="index.php" class="current"><?php echo $lang['text_nav_index']; ?></a></li>
+              <li><a href="about.php"><?php echo $lang['text_nav_about']; ?></a></li>
+              <li><a href="contact.php"><?php echo $lang['text_nav_kontakt']; ?></a></li>
             </ul>
           </nav>
         </div>
 
         <div class="header-actions">
 
-          <select id="language" class="header-action form-field language-select">
-            <option value="de_DE" <?php if ($_GET['lang'] == 'de_DE') echo ('selected'); ?> >Deutsch, Deutschland</option>
-            <option value="en_UK" <?php if ($_GET['lang'] == 'en_UK') echo ('selected'); ?> >English, UK</option>
-            <option value="ar_AR" <?php if ($_GET['lang'] == 'ar_AR') echo ('selected'); ?> >arabisch, EGT</option>
-          </select>
-            <script type="text/javascript">
-                var sel = document.getElementById('language');
-                sel.onchange = function() {
-                    window.location.href = '?lang=' + this.value;
-                }
-            </script>
+        <?php
+            include_once 'assets/language/lang-select.php';
+        ?>
 
-          <a href="sign-in.html" class="header-action btn btn-secondary"><?php echo $lang['button_login']; ?></a>
-          <a href="sign-up.html" class="header-action btn btn-primary"><?php echo $lang['button_register']; ?></a>
+          <a href="sign-in.php" class="header-action btn btn-secondary"><?php echo $lang['button_login']; ?></a>
+          <a href="sign-up.php" class="header-action btn btn-primary"><?php echo $lang['button_register']; ?></a>
         </div>
       </div>
     </header>
@@ -86,7 +75,7 @@ window.cookieconsent.initialise({
           <p class="lead">
             <?php echo $lang['text_section_index_text']; ?>
           </p>
-          <a href="about.html" class="btn btn-primary"><?php echo $lang['button_about']; ?></a>
+          <a href="about.php" class="btn btn-primary"><?php echo $lang['button_about']; ?></a>
         </div>
       </section>
 
@@ -110,7 +99,7 @@ window.cookieconsent.initialise({
             <?php echo $lang['text_section_about_text']; ?>
           </p>
 
-          <a href="about.html" class="btn btn-primary"><?php echo $lang['button_about']; ?></a>
+          <a href="about.php" class="btn btn-primary"><?php echo $lang['button_about']; ?></a>
         </div>
       </section>
 
@@ -124,7 +113,7 @@ window.cookieconsent.initialise({
 
           <div class="grid col-gap-3 equal-height-col">
             <div class="col">
-              <a href="freewifi.html" class="card">
+              <a href="freewifi.php" class="card">
                 <h3 class="card-heading"><?php echo $lang['text_section_aboutus_freewifi']; ?></h3>
                 <img src="assets/images/wifilogo.jpg" alt="" class="card-image">
                 <p class="card-text">
@@ -133,7 +122,7 @@ window.cookieconsent.initialise({
               </a>
             </div>
             <div class="col">
-              <a href="sip.html" class="card">
+              <a href="sip.php" class="card">
                 <h3 class="card-heading"><?php echo $lang['text_section_aboutus_sip']; ?></h3>
                 <img src="assets/images/tellogo.jpg" alt="" class="card-image">
                 <p class="card-text">
@@ -142,7 +131,7 @@ window.cookieconsent.initialise({
               </a>
             </div>
             <div class="col">
-              <a href="hilfe.html" class="card">
+              <a href="hilfe.php" class="card">
                 <h3 class="card-heading"><?php echo $lang['text_section_aboutus_help']; ?></h3>
                 <img src="assets/images/hilfe-logo.png" alt="" class="card-image">
                 <p class="card-text">
@@ -151,7 +140,7 @@ window.cookieconsent.initialise({
               </a>
             </div>
             <div class="col">
-              <a href="more.html" class="card">
+              <a href="more.php" class="card">
                 <h3 class="card-heading"><?php echo $lang['text_section_aboutus_more']; ?></h3>
                 <img src="assets/images/more-logo.png" alt="" class="card-image">
                 <p class="card-text">
@@ -172,8 +161,8 @@ window.cookieconsent.initialise({
           </p>
 
           <div class="section-buttons">
-            <a href="sign-in.html" class="btn btn-secondary btn-white"><?php echo $lang['button_login']; ?></a>
-            <a href="sign-up.html" class="btn btn-primary"><?php echo $lang['button_register']; ?></a>
+            <a href="sign-in.php" class="btn btn-secondary btn-white"><?php echo $lang['button_login']; ?></a>
+            <a href="sign-up.php" class="btn btn-primary"><?php echo $lang['button_register']; ?></a>
           </div>
         </div>
       </section>
@@ -206,28 +195,25 @@ window.cookieconsent.initialise({
         <div class="logo-nav-wrapper">
           <a href="index.php" class="logo">
             <img src="assets/images/ows-logo.png" alt="OWS Netz Logo" class="logo-image">
-            <p class="logo-text">OWS Netz</p>
           </a>
 
           <nav class="nav">
             <ul>
-              <li><a href="index.html" class="current"><?php echo $lang['text_nav_index']; ?></a></li>
-              <li><a href="about.html"><?php echo $lang['text_nav_about']; ?></a></li>
-              <li><a href="contact.html"><?php echo $lang['text_nav_kontakt']; ?></a></li>
+              <li><a href="index.php" class="current"><?php echo $lang['text_nav_index']; ?></a></li>
+              <li><a href="about.php"><?php echo $lang['text_nav_about']; ?></a></li>
+              <li><a href="contact.php"><?php echo $lang['text_nav_kontakt']; ?></a></li>
             </ul>
           </nav>
 
         </div>
 
         <div class="footer-actions">
-          <select id="language" class="footer-action form-field language-select">
-            <option value="de_DE" <?php if ($_GET['lang'] == 'de_DE') echo ('selected'); ?> >Deutsch, Deutschland</option>
-            <option value="en_UK" <?php if ($_GET['lang'] == 'en_UK') echo ('selected'); ?> >English, UK</option>
-            <option value="ar_AR" <?php if ($_GET['lang'] == 'ar_AR') echo ('selected'); ?> >arabisch, EGT</option>
-          </select>
+        <?php
+            include_once 'assets/language/lang-select.php';
+        ?>
 
-          <a href="sign-in.html" class="footer-action btn btn-secondary"><?php echo $lang['button_login']; ?></a>
-          <a href="sign-up.html" class="footer-action btn btn-primary"><?php echo $lang['button_register']; ?></a>
+          <a href="sign-in.php" class="footer-action btn btn-secondary"><?php echo $lang['button_login']; ?></a>
+          <a href="sign-up.php" class="footer-action btn btn-primary"><?php echo $lang['button_register']; ?></a>
 
         </div>
       </div>
