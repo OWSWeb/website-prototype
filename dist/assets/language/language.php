@@ -36,6 +36,32 @@
               $lang_file = 'lang.ru.php';
               break;
 
+              case 'fr':
+              //Russisch
+              $lang_file = 'lang.fr.php';
+              break;
+
+              case 'it':
+              //Russisch
+              $lang_file = 'lang.it.php';
+              break;
+
+              case 'es':
+              //Russisch
+              $lang_file = 'lang.es.php';
+              break;
+
+              case 'ro':
+              //Russisch
+              $lang_file = 'lang.ro.php';
+              break;
+
+              case 'tr':
+              //Russisch
+              $lang_file = 'lang.tr.php';
+              break;
+
+
               case 'pl':
               //Polnisch
               $lang_file = 'lang.pl.php';

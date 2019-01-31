@@ -1,6 +1,8 @@
 <?php
 
 ?>
+    <!-- Language BEGIN -->
+
           <select id="language" class="header-action form-field language-select">
             <option value="ar" lang="ar"<?php if ($lang['code'] == 'ar') echo ('selected'); ?> >العربية</option><!-- Al-ʿArabīyah -->
             <option value="az" lang="az"<?php if ($lang['code'] == 'az') echo ('selected'); ?> >Azərbaycanca</option>
@@ -63,12 +65,6 @@
             <option value="war" lang="war"<?php if ($lang['code'] == 'war') echo ('selected'); ?> >Winaray</option>
             <option value="zh" lang="zh"<?php if ($lang['code'] == 'zh') echo ('selected'); ?> >中文</option><!-- Zhōngwén -->
             <option value="ko" lang="ko"<?php if ($lang['code'] == 'ko') echo ('selected'); ?> >한국어</option><!-- Hangugeo -->
-
           </select>
-            <script type="text/javascript">
-                var sel = document.getElementById('language');
-                sel.onchange = function() {
-                    window.location.href = '?lang=' + this.value;
-                }
-            </script>
 
+    <!-- Language ENDE -->
